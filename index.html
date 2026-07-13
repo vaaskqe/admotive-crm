@@ -278,6 +278,12 @@ td.lead-cell{min-width:190px}
 
 /* ---------- KANBAN ---------- */
 .kanban{display:none;gap:12px;overflow-x:auto;align-items:flex-start;padding-bottom:16px}
+.kb-topscroll{position:sticky;top:62px;z-index:20;overflow-x:auto;overflow-y:hidden;display:none;margin-bottom:10px}
+.kb-topscroll #kbTopScrollInner{height:1px}
+.kb-topscroll::-webkit-scrollbar{height:10px}
+.kb-topscroll::-webkit-scrollbar-thumb{background:#c9d5e6;border-radius:6px}
+.kb-topscroll::-webkit-scrollbar-thumb:hover{background:#a9bcd6}
+.kb-topscroll::-webkit-scrollbar-track{background:#eef1f5;border-radius:6px}
 .kb-col{flex:0 0 235px;background:#f4f1e9;border-radius:14px;padding:10px 10px 12px;display:flex;flex-direction:column;align-self:flex-start}
 .kb-col-head{display:flex;align-items:center;gap:8px;padding:3px 6px 10px;flex:none}
 .kb-col-title{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
@@ -449,6 +455,7 @@ body.kb-dragging{cursor:grabbing;-webkit-user-select:none;user-select:none}
 
     <div class="cards" id="cards"></div>
 
+    <div class="kb-topscroll" id="kbTopScroll"><div id="kbTopScrollInner"></div></div>
     <div class="kanban" id="kanban"></div>
   </div>
 </div>

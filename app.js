@@ -393,6 +393,13 @@ let justDragged = false;
 function initKanbanDrag() {
   const kanban = $('kanban');
   kanban.addEventListener('pointerdown', kbPointerDown);
+  const top = $('kbTopScroll');
+  if (top) {
+    let syncing = false;
+    kanban.addEventListener('scroll', () => { if (syncing) return; syncing = true; top.scrollLeft = kanban.scrollLeft; syncing = false; });
+    top.addEventListener('scroll', () => { if (syncing) return; syncing = true; kanban.scrollLeft = top.scrollLeft; syncing = false; });
+    window.addEventListener('resize', syncKbTopScroll);
+  }
 }
 function kbPointerDown(e) {
   if (e.button && e.button !== 0) return;              // left button / touch only
@@ -465,12 +472,21 @@ function kbCleanup() {
   drag = null;
 }
 
+function syncKbTopScroll() {
+  const kb = $('kanban'), top = $('kbTopScroll'), inner = $('kbTopScrollInner');
+  if (!kb || !top || !inner) return;
+  const overflow = kb.scrollWidth > kb.clientWidth + 2;
+  top.style.display = (state.view === 'pipeline' && overflow) ? 'block' : 'none';
+  inner.style.width = kb.scrollWidth + 'px';
+  top.scrollLeft = kb.scrollLeft;
+}
 function renderView() {
   const isKb = state.view === 'pipeline';
   document.querySelector('.table-card').style.display = isKb ? 'none' : '';
   $('cards').style.display = isKb ? 'none' : '';
   $('kanban').style.display = isKb ? 'flex' : 'none';
   if (isKb) renderKanban(); else renderTableView();
+  syncKbTopScroll();
 }
 
 function renderTable() { renderView(); }
