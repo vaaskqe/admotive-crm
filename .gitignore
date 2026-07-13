@@ -1,0 +1,7 @@
+node_modules/
+secrets.json
+*.png
+dbpass.txt
+zapier-code-step.js
+config.template.js
+schema.sql
