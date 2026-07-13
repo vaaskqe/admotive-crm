@@ -47,14 +47,14 @@ const demoLeads = [
 ];
 const demoActivities = {
   1: [
-    { id: 'a1', type: 'status', author: 'System', body: 'Lead created from Slack (#kgen-booking)', created_at: '2026-07-11T21:26:00Z' },
-    { id: 'a2', type: 'comment', author: 'Kosta', body: 'Reached out on Instagram, he replied fast — very interested in scaling his PPF side.', created_at: '2026-07-11T22:10:00Z' },
-    { id: 'a3', type: 'fathom', author: 'Mihajlo', body: 'https://fathom.video/calls/384112', created_at: '2026-07-12T10:05:00Z' },
-    { id: 'a4', type: 'status', author: 'Mihajlo', body: 'Status changed: Contacted → Call Booked', created_at: '2026-07-12T10:06:00Z' },
+    { id: 'a1', type: 'status', author: 'System', body: 'Lead created from Meta Lead Ad', created_at: '2026-07-11T21:26:00Z' },
+    { id: 'a2', type: 'comment', author: 'Hunter', body: 'Reached out, replied fast — very interested in running ads with us.', created_at: '2026-07-11T22:10:00Z' },
+    { id: 'a3', type: 'fathom', author: 'Hunter', body: 'https://fathom.video/calls/384112', created_at: '2026-07-12T10:05:00Z' },
+    { id: 'a4', type: 'status', author: 'Hunter', body: 'Status changed: Contacted → Call Booked', created_at: '2026-07-12T10:06:00Z' },
   ],
   4: [
-    { id: 'a5', type: 'status', author: 'System', body: 'Lead created from Slack (#kgen-booking)', created_at: '2026-07-10T20:26:00Z' },
-    { id: 'a6', type: 'comment', author: 'Dan', body: 'Meta ad lead — booked straight from the funnel. Call went well, sending proposal tomorrow.', created_at: '2026-07-11T18:30:00Z' },
+    { id: 'a5', type: 'status', author: 'System', body: 'Lead created from Meta Lead Ad', created_at: '2026-07-10T20:26:00Z' },
+    { id: 'a6', type: 'comment', author: 'Hunter', body: 'Meta ad lead — booked straight from the funnel. Call went well, sending proposal tomorrow.', created_at: '2026-07-11T18:30:00Z' },
   ],
 };
 
