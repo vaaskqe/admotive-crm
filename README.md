@@ -1,2 +1,2 @@
 # Admotive Lead CRM
-Live: https://vaaskqe.github.io/admotive-crm/
+Live: https://admotive-crm.github.io/
