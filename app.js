@@ -512,7 +512,51 @@ function renderTableView() {
   }).join('');
 }
 
-function renderAll() { renderStats(); renderFollowups(); renderView(); }
+function monthKeyLocal(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0'); }
+function renderGrowth() {
+  const el = $('growthCard');
+  if (!el) return;
+  const now = new Date();
+  const months = [];
+  for (let i = 5; i >= 0; i--) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    months.push({ key: monthKeyLocal(d), label: d.toLocaleDateString('en-GB', { month: 'short' }), count: 0 });
+  }
+  const idx = {}; months.forEach((m, i) => idx[m.key] = i);
+  state.leads.forEach(l => {
+    if (!l.created_at) return;
+    const k = monthKeyLocal(new Date(l.created_at));
+    if (k in idx) months[idx[k]].count++;
+  });
+  const max = Math.max(1, ...months.map(m => m.count));
+  const thisM = months[5].count, lastM = months[4].count;
+  let delta;
+  if (lastM === 0) {
+    delta = thisM > 0 ? '<span class="gd up">\u25B2 new momentum</span>' : '<span class="gd flat">no leads yet</span>';
+  } else {
+    const pct = Math.round((thisM - lastM) / lastM * 100);
+    const up = pct >= 0;
+    delta = `<span class="gd ${up ? 'up' : 'down'}">${up ? '\u25B2' : '\u25BC'} ${Math.abs(pct)}% vs last month</span>`;
+  }
+  const bars = months.map((m, i) => {
+    const cur = i === 5;
+    const h = Math.max(Math.round(m.count / max * 100), m.count > 0 ? 6 : 2);
+    return `<div class="gbar-col" title="${m.label}: ${m.count} lead${m.count !== 1 ? 's' : ''}">
+      <div class="gbar-val ${cur ? 'cur' : ''}">${m.count}</div>
+      <div class="gbar-track"><div class="gbar ${cur ? 'cur' : ''}" style="height:${h}%"></div></div>
+      <div class="gbar-lab ${cur ? 'cur' : ''}">${m.label}</div>
+    </div>`;
+  }).join('');
+  el.innerHTML = `
+    <div class="growth-left">
+      <div class="growth-title"><span class="stat-dot"></span>Lead growth</div>
+      <div class="growth-value">${thisM}<span class="growth-unit">this month</span></div>
+      <div class="growth-delta">${delta}</div>
+      <div class="growth-sub"><b>${lastM}</b> last month \u00B7 <b>${state.leads.length}</b> all time</div>
+    </div>
+    <div class="growth-chart">${bars}</div>`;
+}
+function renderAll() { renderStats(); renderGrowth(); renderFollowups(); renderView(); }
 
 /* ---------------- drawer ---------------- */
 function currentLead() {

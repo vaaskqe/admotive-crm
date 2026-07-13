@@ -100,6 +100,31 @@ a{color:var(--blue-text)}
 .stat-note{font-size:12px;color:var(--muted);margin-top:7px}
 .stat-note b{color:var(--ink-2);font-weight:600}
 
+/* ---------- LEAD GROWTH ---------- */
+.growth{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 16px;box-shadow:var(--shadow-sm);margin-bottom:22px;display:flex;align-items:stretch;gap:30px;flex-wrap:wrap}
+.growth-left{min-width:190px;display:flex;flex-direction:column;justify-content:center}
+.growth-title{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em;margin-bottom:9px;display:flex;align-items:center;gap:7px}
+.growth-value{font-family:var(--font-display);font-size:34px;font-weight:700;letter-spacing:-.03em;line-height:1;display:flex;align-items:baseline;gap:8px}
+.growth-unit{font-family:var(--font-ui);font-size:12.5px;font-weight:500;color:var(--muted);letter-spacing:0}
+.growth-delta{margin-top:11px}
+.gd{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;padding:4px 11px;border-radius:99px}
+.gd.up{color:#127a3e;background:#e4f5ec}
+.gd.down{color:#a32c2c;background:#fbe5e5}
+.gd.flat{color:var(--ink-2);background:#eef0f2}
+.growth-sub{font-size:12px;color:var(--muted);margin-top:10px}
+.growth-sub b{color:var(--ink-2);font-weight:600}
+.growth-chart{flex:1;min-width:300px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;padding-top:6px}
+.gbar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:default}
+.gbar-val{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.gbar-val.cur{color:var(--gold-text)}
+.gbar-track{width:100%;max-width:46px;height:72px;display:flex;align-items:flex-end}
+.gbar{width:100%;border-radius:5px 5px 3px 3px;background:#cfe4fb;transition:height .45s ease, filter .15s}
+.gbar.cur{background:var(--gold-grad)}
+.gbar-col:hover .gbar{filter:brightness(.94)}
+.gbar-lab{font-size:11px;font-weight:600;color:var(--muted)}
+.gbar-lab.cur{color:var(--gold-text)}
+@media(max-width:980px){.growth{gap:18px}.growth-chart{min-width:100%}}
+
 /* ---------- FILTERS ---------- */
 .toolbar{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
 .seg{display:inline-flex;background:#f1eee6;border-radius:10px;padding:3px;gap:2px}
@@ -372,9 +397,11 @@ body.kb-dragging{cursor:grabbing;-webkit-user-select:none;user-select:none}
 
     <div class="stats" id="stats"></div>
 
+    <div class="growth" id="growthCard"></div>
+
     <div class="fu-section" id="fuSection">
       <div class="fu-head">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c99700" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1f8bff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         <div class="fu-title">Needs follow up</div>
         <div class="fu-count" id="fuCount">0</div>
       </div>
