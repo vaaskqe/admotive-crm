@@ -35,15 +35,15 @@ let state = {
 
 /* ---------------- demo data ---------------- */
 const demoLeads = [
-  { id: 1, created_at: '2026-07-11T21:26:00Z', name: 'Zach Bruno', email: 'brunozachary1@outlook.com', phone: '+15142164117', social: 'Google business Soclean detailz', heard_from: 'instagram', source: 'Booking page', status: 'call_booked', followup_at: '2026-07-15' },
-  { id: 2, created_at: '2026-07-10T23:22:00Z', name: 'Bryan Landry', email: 'bryan@royalprestigeauto.com', phone: '4385456451', social: 'Royal Prestige Auto', heard_from: 'other', source: 'Booking page', status: 'responded' },
-  { id: 3, created_at: '2026-07-10T21:09:00Z', name: 'Daniel Walker', email: 'tobysdetails@gmail.com', phone: '7789331188', social: "Toby's car detail / Walker mobile detailing", heard_from: 'other', source: 'Booking page', status: 'contacted', followup_at: '2026-07-11' },
-  { id: 4, created_at: '2026-07-10T20:26:00Z', name: 'Oliver Ferguson', email: 'oliverferguson445@gmail.com', phone: '7860220702', social: 'Rinse Revive Detailing Ltd', heard_from: 'automate', source: 'Booking page', status: 'call_held' },
-  { id: 5, created_at: '2026-07-10T13:19:00Z', name: 'Yannick Aubry', email: 'yanaubry@hotmail.com', phone: '+15149418145', social: 'Comme 9 Esthétique Auto', heard_from: 'other', source: 'Booking page', status: 'new' },
-  { id: 6, created_at: '2026-07-10T09:02:00Z', name: 'Devanshu Sharma', email: 'devanshus742@gmail.com', phone: '+13686454918', social: 'Shineandglowssautodetailing', heard_from: 'instagram', source: 'Booking page', status: 'new' },
-  { id: 7, created_at: '2026-06-30T15:40:00Z', name: 'Nikita Buria', email: 'nikitaburia68@gmail.com', phone: '2262248564', social: '@imdetailing.toronto', heard_from: 'automate', source: 'Booking page', status: 'client' },
-  { id: 8, created_at: '2026-06-29T11:15:00Z', name: 'Shian Jeremie', email: 'sjfinehomez@gmail.com', phone: '2892138637', social: 'Autgloo', heard_from: 'other', source: 'Booking page', status: 'no_response' },
-  { id: 9, created_at: '2026-06-29T09:30:00Z', name: 'Chase Bangalie', email: 'chasebanglie@gmail.com', phone: '2892000701', social: 'Chasevibeshinedetailing', heard_from: 'instagram', source: 'Booking page', status: 'lost' },
+  { id: 1, created_at: '2026-07-11T21:26:00Z', name: 'Zach Bruno', email: 'brunozachary1@outlook.com', phone: '+12125550143', social: 'Bright Smile Dental', heard_from: 'meta', source: 'Booking page', status: 'call_booked', followup_at: '2026-07-15' },
+  { id: 2, created_at: '2026-07-10T23:22:00Z', name: 'Bryan Landry', email: 'bryan@royalprestigeauto.com', phone: '+13055550188', social: 'Royal Prestige Realty', heard_from: 'google', source: 'Booking page', status: 'responded' },
+  { id: 3, created_at: '2026-07-10T21:09:00Z', name: 'Daniel Walker', email: 'tobysdetails@gmail.com', phone: '+14155550111', social: 'Walker Mobile Services', heard_from: 'admotive', source: 'Booking page', status: 'contacted', followup_at: '2026-07-11' },
+  { id: 4, created_at: '2026-07-10T20:26:00Z', name: 'Oliver Ferguson', email: 'oliverferguson445@gmail.com', phone: '+16465550129', social: 'Revive Wellness Studio', heard_from: 'meta', source: 'Booking page', status: 'call_held' },
+  { id: 5, created_at: '2026-07-10T13:19:00Z', name: 'Yannick Aubry', email: 'yanaubry@hotmail.com', phone: '+13125550166', social: 'Nine Aesthetics', heard_from: 'form', source: 'Booking page', status: 'new' },
+  { id: 6, created_at: '2026-07-10T09:02:00Z', name: 'Devanshu Sharma', email: 'devanshus742@gmail.com', phone: '+17185550174', social: 'Shine & Glow Co', heard_from: 'affiliate', source: 'Booking page', status: 'new' },
+  { id: 7, created_at: '2026-06-30T15:40:00Z', name: 'Nikita Buria', email: 'nikitaburia68@gmail.com', phone: '+12065550118', social: '@imstudio.nyc', heard_from: 'admotive', source: 'Booking page', status: 'client' },
+  { id: 8, created_at: '2026-06-29T11:15:00Z', name: 'Shian Jeremie', email: 'sjfinehomez@gmail.com', phone: '+14045550155', social: 'Auptics', heard_from: 'other', source: 'Booking page', status: 'no_response' },
+  { id: 9, created_at: '2026-06-29T09:30:00Z', name: 'Chase Bangalie', email: 'chasebanglie@gmail.com', phone: '+13475550142', social: 'Chase Vibe Media', heard_from: 'google', source: 'Booking page', status: 'lost' },
 ];
 const demoActivities = {
   1: [
@@ -54,7 +54,7 @@ const demoActivities = {
   ],
   4: [
     { id: 'a5', type: 'status', author: 'System', body: 'Lead created from Slack (#kgen-booking)', created_at: '2026-07-10T20:26:00Z' },
-    { id: 'a6', type: 'comment', author: 'Dan', body: 'Automate lead — booked straight from the funnel. Call went well, sending proposal tomorrow.', created_at: '2026-07-11T18:30:00Z' },
+    { id: 'a6', type: 'comment', author: 'Dan', body: 'Meta ad lead — booked straight from the funnel. Call went well, sending proposal tomorrow.', created_at: '2026-07-11T18:30:00Z' },
   ],
 };
 
@@ -63,14 +63,21 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => (s || '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cap = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 
-function srcGroup(heard) {
-  return (heard || '').toLowerCase().trim() === 'automate' ? 'automate' : 'organic';
+const SRC = {
+  admotive:  { label: 'Admotive',  color: '#1f8bff' },
+  meta:      { label: 'Meta',      color: '#2b52d6' },
+  affiliate: { label: 'Affiliate', color: '#8b5cf6' },
+  google:    { label: 'Google',    color: '#f0a500' },
+  form:      { label: 'Form',      color: '#14b8a6' },
+  other:     { label: 'Other',     color: '#9aa1ab' },
+};
+function srcKey(heard) {
+  const h = (heard || '').toLowerCase().trim();
+  return SRC[h] ? h : 'other';
 }
 function heardBadge(heard) {
-  const h = (heard || '').toLowerCase().trim();
-  if (h === 'automate') return `<span class="badge src-blue"><span class="bdot"></span>Automate</span>`;
-  const label = h === 'instagram' ? 'Instagram' : (h ? cap(h) : 'Unknown');
-  return `<span class="badge src-gold"><span class="bdot"></span>${esc(label)}</span>`;
+  const k = srcKey(heard);
+  return `<span class="badge src-${k}"><span class="bdot"></span>${SRC[k].label}</span>`;
 }
 function statusPill(status) {
   return `<span class="pill st-${status}"><span class="pdot"></span>${ST[status] || status}</span>`;
@@ -282,7 +289,7 @@ async function deleteLead(lead) {
 function filteredLeads() {
   const f = state.filters;
   let rows = state.leads.filter(l => {
-    if (f.src !== 'all' && srcGroup(l.heard_from) !== f.src) return false;
+    if (f.src !== 'all' && srcKey(l.heard_from) !== f.src) return false;
     if (f.status !== 'all' && l.status !== f.status) return false;
     if (f.q) {
       const q = f.q.toLowerCase();
@@ -309,7 +316,7 @@ function renderStats() {
   const newCount = state.leads.filter(l => l.status === 'new').length;
   const clients = state.leads.filter(l => l.status === 'client').length;
   const calls = state.leads.filter(l => ['call_booked', 'call_held', 'client'].includes(l.status)).length;
-  const autom = state.leads.filter(l => srcGroup(l.heard_from) === 'automate').length;
+  const paid = state.leads.filter(l => ['meta','google'].includes(srcKey(l.heard_from))).length;
   $('stats').innerHTML = `
     <div class="stat"><div class="stat-label"><span class="stat-dot"></span>Total leads</div>
       <div class="stat-value">${state.leads.length}</div>
@@ -322,7 +329,7 @@ function renderStats() {
       <div class="stat-note">booked, held or closed</div></div>
     <div class="stat"><div class="stat-label"><span class="stat-dot"></span>Clients</div>
       <div class="stat-value">${clients}</div>
-      <div class="stat-note"><b>${autom}</b> leads via Automate</div></div>`;
+      <div class="stat-note"><b>${paid}</b> from paid ads</div></div>`;
 }
 
 function renderFollowups() {
@@ -360,9 +367,9 @@ function renderKanban() {
       </div>
       <div class="kb-cards">
         ${col.length ? col.map(l => {
-          const g = srcGroup(l.heard_from);
+          const k = srcKey(l.heard_from);
           const social = cleanSocial(l.social) || l.email || '';
-          return `<div class="kb-card ${g === 'automate' ? 'is-automate' : 'is-organic'}" data-id="${l.id}">
+          return `<div class="kb-card" style="border-left-color:${SRC[k].color}" data-id="${l.id}">
             <div class="kb-card-head">
               <div class="kb-name">${esc(l.name)}</div>
               ${fuBtnHtml(l)}
@@ -475,10 +482,10 @@ function renderTableView() {
 
   $('tbody').innerHTML = rows.map(l => {
     const la = lastActivity(l.id);
-    const g = srcGroup(l.heard_from);
+    const k = srcKey(l.heard_from);
     return `<tr data-id="${l.id}">
       <td class="lead-cell" style="position:relative">
-        <span class="accent ${g === 'automate' ? 'blue' : 'gold'}"></span>
+        <span class="accent" style="background:${SRC[k].color}"></span>
         <div class="lead-name">${esc(l.name)}${fuBtnHtml(l)}</div>
         <div class="lead-social">${esc(cleanSocial(l.social))}</div>
       </td>
@@ -492,9 +499,9 @@ function renderTableView() {
   }).join('');
 
   $('cards').innerHTML = rows.map(l => {
-    const g = srcGroup(l.heard_from);
+    const k = srcKey(l.heard_from);
     return `<div class="lead-card" data-id="${l.id}">
-      <span class="accent ${g === 'automate' ? 'blue' : 'gold'}"></span>
+      <span class="accent" style="background:${SRC[k].color}"></span>
       <div class="lead-card-top">
         <div><div class="lead-name">${esc(l.name)}${fuBtnHtml(l)}</div><div class="lead-social">${esc(cleanSocial(l.social))}</div></div>
         ${statusPill(l.status)}

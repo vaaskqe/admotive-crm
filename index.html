@@ -132,6 +132,12 @@ td.lead-cell{min-width:190px}
 .badge.src-gold .bdot{background:var(--gold)}
 .badge.src-blue{background:var(--blue-wash);color:var(--blue-text)}
 .badge.src-blue .bdot{background:var(--blue)}
+.badge.src-admotive{background:#e8f3ff;color:#0a5bb0}.badge.src-admotive .bdot{background:#1f8bff}
+.badge.src-meta{background:#e6ecff;color:#1d39c4}.badge.src-meta .bdot{background:#2b52d6}
+.badge.src-affiliate{background:#f1e9fe;color:#6b21a8}.badge.src-affiliate .bdot{background:#8b5cf6}
+.badge.src-google{background:#fdf0d5;color:#8a5a00}.badge.src-google .bdot{background:#f0a500}
+.badge.src-form{background:#d9f5ef;color:#0f766e}.badge.src-form .bdot{background:#14b8a6}
+.badge.src-other{background:#eef0f2;color:#4b5563}.badge.src-other .bdot{background:#9aa1ab}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:600;border:none;white-space:nowrap}
 .pill .pdot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.75}
 .date-cell{font-size:12.5px;color:var(--muted);white-space:nowrap}
@@ -382,8 +388,12 @@ body.kb-dragging{cursor:grabbing;-webkit-user-select:none;user-select:none}
       </div>
       <div class="seg" id="srcSeg">
         <button data-src="all" class="active">All</button>
-        <button data-src="organic">Instagram / Other</button>
-        <button data-src="automate">Automate</button>
+        <button data-src="admotive">Admotive</button>
+        <button data-src="meta">Meta</button>
+        <button data-src="affiliate">Affiliate</button>
+        <button data-src="google">Google</button>
+        <button data-src="form">Form</button>
+        <button data-src="other">Other</button>
       </div>
       <div class="select-wrap">
         <select id="statusFilter">
@@ -476,7 +486,7 @@ body.kb-dragging{cursor:grabbing;-webkit-user-select:none;user-select:none}
     <div class="field"><label>Phone</label><input id="mPhone"></div>
     <div class="field"><label>Social media / Business</label><input id="mSocial"></div>
     <div class="field"><label>Heard from</label>
-      <select id="mHeard"><option value="instagram">Instagram</option><option value="other">Other</option><option value="automate">Automate</option></select>
+      <select id="mHeard"><option value="admotive">Admotive</option><option value="meta">Meta</option><option value="affiliate">Affiliate</option><option value="google">Google</option><option value="form">Form</option><option value="other">Other</option></select>
     </div>
     <div class="field"><label>Source</label><input id="mSource" value="Manual entry"></div>
     <div class="modal-actions">
